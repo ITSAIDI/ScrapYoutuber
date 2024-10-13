@@ -39,7 +39,7 @@ To run ScrapYoutuber locally, follow these steps:
 3. **Set up API keys**:
    - Get your API key from [YouTube Data API](https://developers.google.com/youtube/v3/getting-started).
    - Store it in a `.env` file or directly in the configuration file.
-   - You also need to add an LLM_API_Key, here I used Fireworks API but you can change that in **LLM.py**
+   - You also need to add an LLM_API_Key, here I used Fireworks API but you can change that in **LLMs.py**
 
 4. **Run the application**:
 
