@@ -1,0 +1,13 @@
+matplotlib
+colorama
+langchain
+langchain_core
+langchain_fireworks
+langgraph
+python-dotenv
+google-api-python-client
+youtube-transcript-api
+tqdm
+pydantic
+Pillow
+langchain-fireworks
