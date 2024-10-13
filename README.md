@@ -1,3 +1,5 @@
+![ScrapYoutuber Banner](./assets/ScrapYotuber.png)
+
 # ScrapYoutuber
 
 ScrapYoutuber is an efficient tool designed to assist sponsors and businesses in collecting crucial information about YouTubers. This tool automates the extraction of key data, such as primary topics, social media profiles, engagement metrics, and more, saving valuable time and effort.
