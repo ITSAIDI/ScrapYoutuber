@@ -5,9 +5,17 @@ from colorama import Fore, Back, Style,init
 from PIL import Image
 import matplotlib.pyplot as plt
 import io
+import json
 
 init(autoreset=True)
 
+def Save_to_Json(Information):
+    file_path = "Informations.json"
+    with open(file_path, "w") as f:
+        json.dump(Information, f,indent=4)
+    print(f"Data has been saved to {file_path}")
+    
+    
 def Create_RAG(state:State):
     print(Style.BRIGHT+Fore.YELLOW+"Create RAG ...")
     Youtube_handle = state["Youtube_Handle"]
@@ -45,6 +53,8 @@ def Generator_function(state:State):
     return {"query":Generator_Response.query,"Task_completed":Generator_Response.Done,"counter":state["counter"]+1}
 
 def Condition(state:State):
+    
+    Save_to_Json(state["Response"])
     print(Style.BRIGHT+Fore.CYAN+"Condition ...")
     print("State : \n",state["Response"])
     Task_completed = state["Task_completed"]
