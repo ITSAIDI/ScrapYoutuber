@@ -11,7 +11,6 @@ from Graph import Graph
 
 
 
-
 #Visualize(Graph)
 #clear_database()
 def main():
