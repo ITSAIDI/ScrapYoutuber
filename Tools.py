@@ -43,7 +43,7 @@ def get_upload_playlist_id(channel_id):
         print(f"An error occurred: {e}")
         return None
 
-def get_latest_videos(playlist_id, max_results=5):
+def get_latest_videos(playlist_id, max_results=6):
     try:
         response = youtube.playlistItems().list(
             part='snippet',
@@ -105,6 +105,37 @@ def Get_Video_Details(handle):
                             )
         Documents.append(document)
     return Documents
+
+def GetVideos(Handle):
+    Channelid = resolve_handle_to_channel_id(Handle)
+    playlistId = get_upload_playlist_id(Channelid)
+    Latest_videos = get_latest_videos(playlistId)
+    Videos_metadata = []
+
+    for video in Latest_videos:
+        video_id = video['snippet']['resourceId']['videoId']
+        video_details = get_video_details(video_id)
+        
+        # Attempt to get higher-quality thumbnails
+        thumbnails = video_details.get('thumbnails', {})
+        thumbnail_url = (
+            thumbnails.get('maxres', {}).get('url') or
+            thumbnails.get('standard', {}).get('url') or
+            thumbnails.get('high', {}).get('url') or
+            thumbnails.get('medium', {}).get('url') or
+            thumbnails.get('default', {}).get('url', 'No thumbnail')
+        )
+
+        Video_metadata = {
+            'url': f"https://www.youtube.com/watch?v={video_id}",
+            'title': video_details.get('title', 'No title'),
+            'release_date': video_details.get('publishedAt', 'No date'),
+            'channel_name': video_details.get('channelTitle', 'No channel name'),
+            'thumbnail': thumbnail_url,
+        }
+        Videos_metadata.append(Video_metadata)
+
+    return Videos_metadata
 
 ################ Featch Web Informations ################################################
 ################################################################################################################################
