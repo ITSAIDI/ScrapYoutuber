@@ -35,8 +35,7 @@ def Extractor_function(state:State):
 
 def Generator_function(state:State):
     print(Style.BRIGHT+Fore.GREEN+"Generator Thinking...")
-    Info = state["Response"]
-    input = {"Informations":Info,"Youtube_handle":state["Youtube_Handle"]}
+    input = {"Informations":state["Response"],"Youtube_handle":state["Youtube_Handle"]}
     Generator_Response = Generator.invoke(input)
     return {"query":Generator_Response.query,"Task_completed":Generator_Response.Done}
 
