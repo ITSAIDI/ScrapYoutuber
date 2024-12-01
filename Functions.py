@@ -39,7 +39,7 @@ def Generator_function(state:State):
     
     input = {"Informations":state["Response"],"Youtube_handle":state["Youtube_Handle"]}
     Generator_Response = Generator.invoke(input)
-    if state["counter"] > 3:
+    if state["counter"] > 2:
         return {"query":Generator_Response.query,"Task_completed":"YES"}
     
     return {"query":Generator_Response.query,"Task_completed":Generator_Response.Done,"counter":state["counter"]+1}
