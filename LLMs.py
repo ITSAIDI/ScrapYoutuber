@@ -1,5 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.pydantic_v1 import BaseModel, Field
+from pydantic import BaseModel, Field
 from langchain_fireworks import ChatFireworks
 from dotenv import load_dotenv
 import os
@@ -12,7 +12,7 @@ class Gnerator_Output(BaseModel):
     query    : str = Field(..., description="This is the query to search for in the Store of Informations")
     Done : str = Field(..., description="This is a boolean value indicating if all informations are found or not")
         
-llm = ChatFireworks(api_key=os.getenv("FIREWOKS_API_KEY"),model="accounts/fireworks/models/mixtral-8x22b-instruct",temperature=0.7)
+llm = ChatFireworks(api_key=os.getenv("FIREWORKS_API_KEY"),model="accounts/fireworks/models/llama-v3p1-8b-instruct",temperature=0.7)
 
 structured_llm_extractor = llm.with_structured_output(Extractor_Output)
 structured_llm_generator = llm.with_structured_output(Gnerator_Output)

@@ -12,14 +12,14 @@ from Graph import Graph
 
 
 
-#Visualize(Graph)
+Visualize(Graph)
 clear_database()
 def main():
     Youtube_handle = "@aiadvantage"
     for event in Graph.stream({"Youtube_Handle":Youtube_handle}):
         for value in event.values():
             pass
-main()
+#main()
 
 
 

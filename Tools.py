@@ -204,7 +204,3 @@ def clear_database():
 
 
 #clear_database()
-for Video in Get_Video_Details("@bhancock_ai"):
-    print("#####################")
-    print(Video.page_content)
-    print(Video.metadata)
