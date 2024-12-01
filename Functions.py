@@ -35,17 +35,26 @@ def Extractor_function(state:State):
 
 def Generator_function(state:State):
     print(Style.BRIGHT+Fore.GREEN+"Generator Thinking...")
+    print(Style.BRIGHT+Fore.CYAN+"Iteration :",state["counter"])
+    
     input = {"Informations":state["Response"],"Youtube_handle":state["Youtube_Handle"]}
     Generator_Response = Generator.invoke(input)
-    return {"query":Generator_Response.query,"Task_completed":Generator_Response.Done}
+    if state["counter"] > 3:
+        return {"query":Generator_Response.query,"Task_completed":"YES"}
+    
+    return {"query":Generator_Response.query,"Task_completed":Generator_Response.Done,"counter":state["counter"]+1}
 
 def Condition(state:State):
     print(Style.BRIGHT+Fore.CYAN+"Condition ...")
     print("State : \n",state["Response"])
     Task_completed = state["Task_completed"]
+    
     if "YES" in Task_completed.upper():
         return "END"
-    return "CONTINUE"
+    else: 
+        return "CONTINUE"
+       
+    
 
 def Visualize(Graph):
     image_data = Graph.get_graph(xray=True).draw_png()

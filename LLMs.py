@@ -12,7 +12,7 @@ class Gnerator_Output(BaseModel):
     query    : str = Field(..., description="This is the query to search for in the Store of Informations")
     Done : str = Field(..., description="This is a boolean value indicating if all informations are found or not")
         
-llm = ChatFireworks(api_key=os.getenv("FIREWORKS_API_KEY"),model="accounts/fireworks/models/qwen2p5-14b-instruct",temperature=0.7)
+llm = ChatFireworks(api_key=os.getenv("FIREWORKS_API_KEY"),model="accounts/fireworks/models/mixtral-8x22b-instruct",temperature=0.7)
 
 structured_llm_extractor = llm.with_structured_output(Extractor_Output)
 structured_llm_generator = llm.with_structured_output(Gnerator_Output)

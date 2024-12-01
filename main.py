@@ -16,7 +16,7 @@ from Graph import Graph
 #clear_database()
 def main():
     Youtube_handle = "@aiadvantage"
-    for event in Graph.stream({"Youtube_Handle":Youtube_handle,"Response":"None"}):
+    for event in Graph.stream({"Youtube_Handle":Youtube_handle,"Response":"None","counter":1}):
         for value in event.values():
             pass
 main()

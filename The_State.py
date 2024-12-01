@@ -7,6 +7,7 @@ class State(TypedDict):
     Content : str
     Response : str
     Task_completed : str
+    counter : int
 
 
  
