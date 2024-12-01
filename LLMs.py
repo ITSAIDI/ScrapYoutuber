@@ -9,7 +9,7 @@ load_dotenv()
 class Extractor_Output(BaseModel):
     Response : str = Field(..., description="This is your Response in a form of a python dictionary")
 class Gnerator_Output(BaseModel):
-    query    : str = Field(..., description="This is the query to search in the Store of Informations")
+    query    : str = Field(..., description="This is the query to search for in the Store of Informations")
     Done : str = Field(..., description="This is a boolean value indicating if all informations are found or not")
         
 llm = ChatFireworks(api_key=os.getenv("FIREWOKS_API_KEY"),model="accounts/fireworks/models/mixtral-8x22b-instruct",temperature=0.7)
@@ -31,13 +31,16 @@ Steps To Perform Your Task :\n
 """
 
 system_generator = """You are an expert at Gnerating search queries.\n
+
 Steps To Perform Your First Task :\n
 
     1. Observe The extracted data by  your Team memeber (Extractor) \n
     2. Try to find what are the missing informations in this data.(like None or Not found)\n
-    3. Generate a query to search in the Informations's Store, In order to find this missing informations.\n
+    3. Generate a query to search in the Informations's Store, In order to find these missing informations.\n
     
-**Important Note : ** - If The Extractor response is None ,Your String  Query should be like this : "Youtube Channel {Youtube_handle}".    
+**Important Note : ** 
+
+- If The Extractor response is None ,Your String  Query should be like this : "Youtube Channel {Youtube_handle}".    
 
 Your second Task is :\n
 

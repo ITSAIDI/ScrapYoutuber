@@ -148,14 +148,14 @@ from langchain_fireworks import FireworksEmbeddings
 
 
 FIREWORKS_API_KEY = os.getenv('FIREWORKS_API_KEY')
-CHROMA_PATH = r"C:\Users\hp\Downloads\LLM_Courses\Pratiques\Projects\Youtuber_Scraper\Chroma"
+CHROMA_PATH = "ScrapYoutuber/Chroma"
 
 
 #### Chunking Function 
 def Split_text(documents):
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=800,
-        chunk_overlap=100,
+        chunk_size=1000,
+        chunk_overlap=400,
         length_function=len,
         add_start_index=True,
     )
@@ -201,3 +201,10 @@ def clear_database():
     if os.path.exists(CHROMA_PATH):
         shutil.rmtree(CHROMA_PATH)
     print(Style.BRIGHT+Fore.GREEN + f"Deleted the database at {CHROMA_PATH}.")
+
+
+#clear_database()
+for Video in Get_Video_Details("@bhancock_ai"):
+    print("#####################")
+    print(Video.page_content)
+    print(Video.metadata)
