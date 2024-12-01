@@ -148,7 +148,7 @@ from langchain_fireworks import FireworksEmbeddings
 
 
 FIREWORKS_API_KEY = os.getenv('FIREWORKS_API_KEY')
-CHROMA_PATH = "ScrapYoutuber/Chroma"
+CHROMA_PATH = "Chroma"
 
 
 #### Chunking Function 
