@@ -1,6 +1,6 @@
-<div style="text-align: center;">
+<p align="center">
     <img src="./assets/ScrapYoutuber_Logo.png" alt="ScrapYoutuber Banner" width="300" height="300" />
-</div>
+</p>
 
 # ScrapYoutuber
 
