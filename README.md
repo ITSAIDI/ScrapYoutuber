@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./assets/ScrapYoutuber_Logo.png" alt="ScrapYoutuber Banner" width="300" height="300" />
+    <img src="./assets/ScrapYoutuber_Logo.png" alt="ScrapYoutuber Banner" width="400" height="400" />
 </p>
 
 # ScrapYoutuber
