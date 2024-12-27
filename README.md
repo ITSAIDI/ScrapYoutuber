@@ -2,6 +2,12 @@
     <img src="./assets/ScrapYoutuber_Logo.png" alt="ScrapYoutuber Banner" width="400" height="400" />
 </p>
 
+<p align="center">
+    <a href="https://www.youtube.com/watch?v=wiHAdLXlr0M" target="_blank">
+        <img src="./assets/youtube.png" alt="youtube" width="50" height="35" />
+    </a>
+</p>
+
 # ScrapYoutuber
 
 ScrapYoutuber is an efficient tool designed to assist sponsors and businesses in collecting crucial information about YouTubers. This tool automates the extraction of key data, such as primary topics, social media profiles, engagement metrics, and more, saving valuable time and effort.
