@@ -1,4 +1,4 @@
-![ScrapYoutuber Banner](./assets/ScrapYoutuber_Logo.png)
+<img src="./assets/ScrapYoutuber_Logo.png" alt="ScrapYoutuber Banner" width="600" height="300" />
 
 # ScrapYoutuber
 
