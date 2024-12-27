@@ -6,6 +6,12 @@
 
 ScrapYoutuber is an efficient tool designed to assist sponsors and businesses in collecting crucial information about YouTubers. This tool automates the extraction of key data, such as primary topics, social media profiles, engagement metrics, and more, saving valuable time and effort.
 
+## Demo 
+
+<video src="./assets/Demo.mp4" controls width="800" height="450">
+    Your browser does not support the video tag.
+</video>
+
 ## Inference Pipeline
 
 ![ScrapYoutuber pipeline](./assets/ScrapYoutuber_pipeline.png)
