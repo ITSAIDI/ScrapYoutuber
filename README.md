@@ -6,7 +6,7 @@ ScrapYoutuber is an efficient tool designed to assist sponsors and businesses in
 
 ## Inference Pipeline
 
-![ScrapYoutuber Banner](./assets/ScrapYotuber_pipeline.png)
+![ScrapYoutuber pipeline](./assets/ScrapYoutuber_pipeline.png)
 
 ## Features
 
