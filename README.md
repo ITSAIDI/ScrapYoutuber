@@ -8,13 +8,7 @@ ScrapYoutuber is an efficient tool designed to assist sponsors and businesses in
 
 ## Demo 
 
-<object width="425" height="350">
-  <param name="movie" value="http://www.youtube.com/user/wwwLoveWatercom?v=BTRN1YETpyg" />
-  <param name="wmode" value="transparent" />
-  <embed src="http://www.youtube.com/user/wwwLoveWatercom?v=BTRN1YETpyg"
-         type="application/x-shockwave-flash"
-         wmode="transparent" width="425" height="350" />
-</object>
+[![Demo](./assets/Frame.jpg)](https://www.youtube.com/watch?v=wiHAdLXlr0M)
 
 ## Inference Pipeline
 
