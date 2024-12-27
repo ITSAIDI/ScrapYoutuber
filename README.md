@@ -8,9 +8,7 @@ ScrapYoutuber is an efficient tool designed to assist sponsors and businesses in
 
 ## Demo 
 
-<video src="./assets/Demo.mp4" controls width="800" height="450">
-    Your browser does not support the video tag.
-</video>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/be0W1DTHxas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Inference Pipeline
 
