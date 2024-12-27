@@ -1,4 +1,4 @@
-![ScrapYoutuber Banner](./assets/ScrapYotuber_Logo.png)
+![ScrapYoutuber Banner](./assets/ScrapYoutuber_Logo.png)
 
 # ScrapYoutuber
 
