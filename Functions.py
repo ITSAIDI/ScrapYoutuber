@@ -9,7 +9,7 @@ import json
 
 init(autoreset=True)
 
-def Save_to_Js(Information):
+def Save_to_Json(Information):
     file_path = "Informations.json"
     with open(file_path, "w") as f:
         json.dump(Information, f,indent=4)
